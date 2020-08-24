@@ -8,8 +8,6 @@ external_stylesheets = ['https://codepen.io/chriddyp/pen/bWLwgP.css']
 
 app = dash.Dash(__name__, external_stylesheets=external_stylesheets)
 
-server = app.server
-
 df = pd.DataFrame(
     {
         "State":["Andaman And Nicobar", "Andhra Pradesh","Arunachal Pradesh","Assam", "Bihar", "Chandigarh", "Chhattisgarh", 

@@ -8,8 +8,6 @@ external_stylesheets = ['https://codepen.io/chriddyp/pen/bWLwgP.css']
 
 app = dash.Dash(__name__, external_stylesheets=external_stylesheets)
 
-server = app.server
-
 df = pd.DataFrame(
     {
         "State":["Andaman And Nicobar", "Andhra Pradesh","Arunachal Pradesh","Assam", "Bihar", "Chandigarh", "Chhattisgarh", 
@@ -23,10 +21,10 @@ df = pd.DataFrame(
 fig = px.bar(df, x="State", y="Population", color="State", barmode="group")
 
 app.layout = html.Div(children=[
-    html.H1(children='Dash - Bar Graph'),
+    html.H1(children='Dash Bar Graph'),
 
     html.Div(children='''
-        Population of India as per Census of 2011.
+        Population of India as per Census of 2011
     '''),
 
     dcc.Graph(
